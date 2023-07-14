@@ -4,7 +4,6 @@
 
 /**
  * main - entry point
- * @n: random number
  * Return: returns 0
  */
 
