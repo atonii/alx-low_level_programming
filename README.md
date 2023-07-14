@@ -1,2 +1,1 @@
-List of Directories
-0x00-hello_world
+This Repo is on low_level_programming in c
