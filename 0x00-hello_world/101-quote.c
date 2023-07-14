@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<unistd.h>
+#include<string.h>
 
 /**
  * main - entry point
@@ -8,6 +10,9 @@
 
 int main(void)
 {
-	fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	char *text = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	const int fd = 2;
+
+	write(fd, text, strlen(text));
 	return (1);
 }
