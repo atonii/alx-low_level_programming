@@ -20,10 +20,11 @@ void print_times_table(int n)
 		for (col = 0; col <= n; col++)
 		{
 			mult = rw * col;
-			if ((col > 0) && (col < n))
+			if ((col > 0) && (col <= n))
+			{
 				_putchar(',');
-			if (col > 0)
 				_putchar(' ');
+			}
 			if (mult > 99)
 			{
 				_putchar('0' + (mult / 100));
@@ -34,7 +35,7 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar('0' + (mult / 10));
 			}
-			else
+			else if ((col > 0) && (mult < 10))
 			{
 				_putchar(' ');
 				_putchar(' ');
