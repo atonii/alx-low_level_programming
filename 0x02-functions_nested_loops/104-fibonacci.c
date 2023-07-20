@@ -35,10 +35,10 @@ int main(void)
 			total = first_number + second_number;
 		}
 	}
-	first_number1 = second_number / 1000000000;
-	first_number2 = second_number % 1000000000;
-	second_number1 = total / 1000000000;
-	second_number2 = total % 1000000000;
+	first_number1 = second_number / 1000000;
+	first_number2 = second_number % 1000000;
+	second_number1 = total / 1000000;
+	second_number2 = total % 1000000;
 	total1 = first_number1 + second_number1;
 	total2 = first_number2 + second_number2;
 	for (n = 51; n < 99; n++)
