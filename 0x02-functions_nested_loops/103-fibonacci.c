@@ -20,7 +20,7 @@ int main(void)
 	even_sum = 2;
 	for (n = 3; n < 51; n++)
 	{
-		if (total % 2 == 0)
+		if ((total % 2 == 0) && (total < 4000000))
 			even_sum += total;
 		first_number = second_number;
 		second_number = total;
