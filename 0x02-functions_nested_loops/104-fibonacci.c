@@ -23,11 +23,11 @@ int main(void)
 	second_number = 2;
 	total = first_number + second_number;
 	printf("%lu, %lu", first_number, second_number);
-	for (n = 3; n < 51; n++)
+	for (n = 3; n < 92; n++)
 	{
-		if (n < 51)
+		if (n < 92)
 			printf(", ");
-		if (n < 51)
+		if (n < 92)
 		{
 			printf("%lu", total);
 			first_number = second_number;
@@ -35,13 +35,13 @@ int main(void)
 			total = first_number + second_number;
 		}
 	}
-	first_number1 = second_number / 1000000;
-	first_number2 = second_number % 1000000;
-	second_number1 = total / 1000000;
-	second_number2 = total % 1000000;
+	first_number1 = first_number / 1000000000;
+	first_number2 = first_number % 1000000000;
+	second_number1 = second_number / 1000000000;
+	second_number2 = second_number % 1000000000;
 	total1 = first_number1 + second_number1;
 	total2 = first_number2 + second_number2;
-	for (n = 51; n < 99; n++)
+	for (n = 92; n < 99; ++n)
 	{
 		if (n < 99)
 			printf(", ");
