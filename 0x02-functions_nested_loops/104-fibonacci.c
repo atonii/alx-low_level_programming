@@ -32,28 +32,26 @@ int main(void)
 			printf("%lu", total);
 			first_number = second_number;
 			second_number = total;
-			total = first_number + second_number;
-		}
-	}
-	first_number1 = first_number / 1000000000;
-	first_number2 = first_number % 1000000000;
-	second_number1 = second_number / 1000000000;
-	second_number2 = second_number % 1000000000;
+			total = first_number + second_number;}}
+	first_number1 = first_number / 100000000000;
+	first_number2 = first_number % 100000000000;
+	second_number1 = second_number / 100000000000;
+	second_number2 = second_number % 100000000000;
 	total1 = first_number1 + second_number1;
 	total2 = first_number2 + second_number2;
-	for (n = 92; n < 99; ++n)
+	for (n = 92; n < 99; n++)
 	{
 		if (n < 99)
 			printf(", ");
-		printf("%lu%lu", total1, total2);
+		if (total1 < 10000000000)
+			printf("%lu%lu", (total1 + (total2 / 100000000000)), total2 % 100000000000);
+		else
+			printf("%lu%lu", total1, total2);
 		first_number1 = second_number1;
 		first_number2 = second_number2;
 		second_number1 = total1;
 		second_number2 = total2;
 		total1 = first_number1 + second_number1;
-		total2 = first_number2 + second_number2;
-	}
-	
+		total2 = first_number2 + second_number2;}
 	printf("\n");
-	return (0);
-}
+	return (0);}
