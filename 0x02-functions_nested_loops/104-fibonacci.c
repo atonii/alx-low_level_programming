@@ -9,15 +9,8 @@
 int main(void)
 {
 	int n;
-	long total;
-	long first_number;
-	long second_number;
-	long first_number1;
-	long first_number2;
-	long second_number1;
-	long second_number2;
-	long total1;
-	long total2;
+	long total, first_number, second_number, first_number1;
+	long first_number2, second_number1, second_number2, total1, total2;
 
 	first_number = 1;
 	second_number = 2;
@@ -32,7 +25,7 @@ int main(void)
 			printf("%lu", total);
 			first_number = second_number;
 			second_number = total;
-			total = first_number + second_number;}}
+			total = first_number + second_number; }}
 	first_number1 = first_number / 100000000000;
 	first_number2 = first_number % 100000000000;
 	second_number1 = second_number / 100000000000;
@@ -52,6 +45,6 @@ int main(void)
 		second_number1 = total1;
 		second_number2 = total2;
 		total1 = first_number1 + second_number1;
-		total2 = first_number2 + second_number2;}
+		total2 = first_number2 + second_number2; }
 	printf("\n");
-	return (0);}
+	return (0); }
