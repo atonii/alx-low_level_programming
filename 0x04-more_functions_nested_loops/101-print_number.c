@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
  * print_number -  main function name
  * @n: number to be printed
@@ -23,10 +23,8 @@
 
 void print_up(int a)
 {
-	int new_a, multiplier, div_result, extra_zero_del, a_print_count, last_digit;
+	int new_a, multiplier, div_result, extra_zero_del, a_print_count;
 
-	last_digit = a % 10;
-	a = a / 10;
 	new_a = a;
 	multiplier = 1;
 
@@ -42,7 +40,7 @@ void print_up(int a)
 		_putchar('0' + (a / extra_zero_del) % 10);
 		extra_zero_del = extra_zero_del / 10;
 	}
-	_putchar('0' + last_digit);
+	
 }
 void print_up(int a);
 
@@ -63,8 +61,17 @@ void print_down(int b);
 
 void print_number(int n)
 {
-	if (n > 0)
+	int last_digit;
+
+	if ((n > 0) && (n != INT_MAX))
 		print_up(n);
+	else if (n == INT_MAX)
+	{
+		last_digit = n % 10;
+		n = n / 10;
+		print_up(n);
+		_putchar('0' + last_digit);
+	}
 	else if (n == 0)
 		_putchar('0' + n);
 	else
