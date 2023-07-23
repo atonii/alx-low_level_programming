@@ -12,18 +12,20 @@
 
 void print_remaining_days(int month, int day, int year)
 {
-	int invalid_day, leap_year1, leap_year2;
+	int leap_year1, leap_year2;
 
 	leap_year1 = year % 4 == 0 && year % 100 != 0;
 	leap_year2 = year % 4 == 0 && year % 400 == 0;
-	invalid_day = day != 60;
-	if ((leap_year1 || leap_year2) && invalid_day)
+	if (leap_year1 || leap_year2)
 	{
-		if (month >= 2 && day <= 60)
+		if (month >= 2 && day != 60)
+		{	
 			day++;
-
-		printf("Day of the year: %d\n", day);
-		printf("Remaining days: %d\n", 366 - day);
+			printf("Day of the year: %d\n", day);
+			printf("Remaining days: %d\n", 366 - day);
+		}
+		else
+			printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
 	}
 	else
 	{
