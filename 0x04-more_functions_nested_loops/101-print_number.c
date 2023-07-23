@@ -23,8 +23,10 @@
 
 void print_up(int a)
 {
-	int new_a, multiplier, div_result, extra_zero_del, a_print_count;
+	int new_a, multiplier, div_result, extra_zero_del, a_print_count, last_digit;
 
+	last_digit = a % 10;
+	a = a / 10;
 	new_a = a;
 	multiplier = 1;
 
@@ -40,6 +42,7 @@ void print_up(int a)
 		_putchar('0' + (a / extra_zero_del) % 10);
 		extra_zero_del = extra_zero_del / 10;
 	}
+	_putchar('0' + last_digit);
 }
 void print_up(int a);
 
