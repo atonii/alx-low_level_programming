@@ -1,24 +1,8 @@
 #include "main.h"
 #include <limits.h>
 /**
- * print_number -  main function name
- * @n: number to be printed
- * Description: prints the value of n to stdout
- * Return: returns nothing
- */
-
-/**
- * print_up - function for postive prints
- * @a: number to print
- * Description: prints +ve numbers
- * Return: returns nothing
- */
-
-/**
- * print_down - function for -ve prints
- * @b: number to print
- * Description: prints -ve numbers
- * Return: returns nothing
+ * print_up - function name
+ * @a: paraneterr
  */
 
 void print_up(int a)
@@ -40,9 +24,13 @@ void print_up(int a)
 		_putchar('0' + (a / extra_zero_del) % 10);
 		extra_zero_del = extra_zero_del / 10;
 	}
-	
 }
 void print_up(int a);
+
+/**
+ * print_down - function name
+ * @b: parameter
+ */
 
 void print_down(int b)
 {
@@ -58,6 +46,11 @@ void print_down(int b)
 	_putchar('0' + (last_digit + 1));
 }
 void print_down(int b);
+
+/**
+ * print_number - function name
+ * @n: parameter
+ */
 
 void print_number(int n)
 {
