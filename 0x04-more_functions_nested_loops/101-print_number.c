@@ -45,13 +45,16 @@ void print_up(int a);
 
 void print_down(int b)
 {
+	int last_digit;
+
 	b += 1;
 	b *= -1;
+	last_digit = b % 10;
 	b = b / 10;
 
 	_putchar('-');
 	print_up(b);
-	_putchar('0' + (b % 10) - 1);
+	_putchar('0' + (last_digit + 1));
 }
 void print_down(int b);
 
