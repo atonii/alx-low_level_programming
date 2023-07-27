@@ -15,7 +15,9 @@ void puts_half(char *str)
 
 	while (str[strlen++] != '\0')
 		;
-	
+
+	strlen--;
+
 	if (strlen % 2 != 0)
 		new_index = (strlen - 1) / 2;
 	new_index = strlen / 2;
