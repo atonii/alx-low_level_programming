@@ -9,20 +9,16 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int old_index, new_index;
+	int old_index;
 
 	old_index = 0;
-	new_index = 0;
 
-	while (src[++old_index] != '\0')
-		;
-
-	while (new_index < old_index)
+	while (src[old_index] != '\0')
 	{
-		dest[new_index] = src[new_index];
-
-		new_index++;
+		dest[old_index] = src[old_index];
+		old_index++;
 	}
+
 	dest[old_index] = '\0';
 
 	return (dest);
