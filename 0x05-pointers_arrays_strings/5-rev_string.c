@@ -13,7 +13,8 @@ void rev_string(char *s)
 	old_index = 0;
 	new_index = 0;
 
-	while (s[++old_index] != '\0');
+	while (s[++old_index] != '\0')
+		;
 	old_index--;
 
 	while (new_index < old_index)
