@@ -13,8 +13,10 @@ void puts2(char *str)
 	strlen = 0;
 	new_index = 0;
 
-	while (str[strlen++] != '\0')
+	while (str[++strlen] != '\0')
 		;
+
+	strlen--;
 
 	while (new_index < strlen)
 	{
