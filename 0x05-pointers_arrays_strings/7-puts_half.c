@@ -20,7 +20,8 @@ void puts_half(char *str)
 
 	if (strlen % 2 != 0)
 		new_index = (strlen - 1) / 2;
-	new_index = strlen / 2;
+	else
+		new_index = strlen / 2;
 
 	while (new_index < strlen)
 	{
