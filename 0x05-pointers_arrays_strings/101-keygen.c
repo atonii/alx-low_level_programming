@@ -4,13 +4,13 @@
 
 int main() {
   int targetSum = 2772;
-  int num;
+  int num, i;
   int currentSum = 0;
-  char randomChars[40]; // Adjust the size as needed to accommodate the characters.
+  char randomChars[40];
 
-  srand(time(0)); // Seed the random number generator with the current time.
+  srand(time(0));
 
-  int i = 0;
+  i = 0;
   while (currentSum < targetSum)
     {
       randomChars[i] = rand() % 78;
