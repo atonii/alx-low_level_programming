@@ -11,7 +11,7 @@ char *rot13(char *s)
 	int i, j;
 
 	char c[] = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n"
-"ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			"ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	i = 0;
 
@@ -19,7 +19,7 @@ char *rot13(char *s)
 	{
 		for (j = 0; j < 104; j++)
 		{
-			if (s[i] == c[j])
+			if (s[i] == c[j] && c[j] != '\n')
 			{
 				s[i] = c[j + 13];
 				break;
